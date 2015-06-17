@@ -1,0 +1,34 @@
+{
+	"name": "tripomatic/nette-api-skeleton",
+	"type": "project",
+	"description": "A skeleton application for Tripomatic\\NetteApi",
+	"keywords": ["nette", "api", "rest", "skeleton"],
+	"homepage": "https://github.com/tripomatic/nette-api-skeleton",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Jan Jakes",
+			"email": "jan@jakes.pro"
+		}
+	],
+    "require": {
+        "tripomatic/nette-api": "@dev",
+        "nette/bootstrap": "^2.3",
+        "tracy/tracy": "^2.3"
+    },
+    "require-dev": {
+        "tripomatic/php-code-quality": "@dev"
+    },
+	"autoload": {
+		"psr-4": {"Tripomatic\\": "src/"}
+	},
+	"scripts": {
+		"pre-install-cmd": "sh git/install-hooks.sh",
+		"pre-update-cmd": "sh git/install-hooks.sh"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "1.0-dev"
+		}
+	}
+}

@@ -1,0 +1,15 @@
+extensions:
+	api: Tripomatic\NetteApi\DI\ApiExtension
+
+application:
+	mapping:
+		Skeleton: 'Tripomatic\SkeletonApplication\Presenters\*Presenter'
+	scanDirs: false
+
+routing:
+	routes:
+		'<presenter>': [ module: Skeleton, presenter: Hello ]
+
+tracy:
+	bar:
+		- Nette\Bridges\DITracy\ContainerPanel
